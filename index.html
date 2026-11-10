@@ -1,0 +1,566 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>The Quiet Dev | Mika Jesu</title>
+
+    <style>
+
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 20px;
+    background: #101722;
+    color: #e7e9e8;
+    font-family: 'DM Sans', sans-serif;
+    line-height: 1.7;
+}
+
+/* HEADER */
+
+header {
+    background: linear-gradient(120deg, #192638, #263d4b);
+    text-align: center;
+    padding: 55px 20px 40px;
+    border: 1px solid #354c5b;
+    border-radius: 15px;
+    box-shadow: 0 12px 35px rgba(0,0,0,0.25);
+}
+
+header h1 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(34px, 5vw, 48px);
+    letter-spacing: 4px;
+    color: #f0e5cf;
+    margin: 0;
+}
+
+header h2 {
+    font-size: 18px;
+    font-weight: 400;
+    color: #a8c3c1;
+    margin: 8px 0;
+}
+
+header p {
+    color: #c3cbd0;
+    margin: 7px;
+}
+
+/* NAVIGATION */
+
+nav {
+    margin-top: 25px;
+}
+
+nav a {
+    color: #d8e1df;
+    text-decoration: none;
+    font-size: 13px;
+    margin: 0 12px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #d5b982;
+}
+
+/* MAIN */
+
+main {
+    max-width: 1100px;
+    margin: 30px auto;
+}
+
+hr {
+    display: none;
+}
+
+/* SECTION CARDS */
+
+section {
+    background: linear-gradient(
+        135deg,
+        rgba(42, 57, 72, 0.96),
+        rgba(31, 43, 57, 0.96)
+    );
+    border: 1px solid #435565;
+    border-radius: 13px;
+    padding: 28px 30px;
+    margin-bottom: 18px;
+    box-shadow: 0 7px 20px rgba(0,0,0,0.18);
+    transition: 0.3s;
+}
+
+section:hover {
+    border-color: #738b91;
+}
+
+section h2 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 25px;
+    color: #e6d5b7;
+    font-weight: 600;
+    margin-top: 0;
+    margin-bottom: 18px;
+}
+
+section p {
+    color: #c3ccd2;
+}
+
+/* PROFILE PHOTO */
+
+#about img {
+    width: 145px;
+    height: 145px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #b5a17b;
+    padding: 4px;
+    display: block;
+    margin: 20px auto;
+}
+
+/* SKILLS */
+
+#skills ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding: 0;
+    list-style: none;
+}
+
+#skills li {
+    background: #344e5a;
+    color: #e1e9e6;
+    border: 1px solid #58717a;
+    border-radius: 30px;
+    padding: 7px 17px;
+    font-size: 13px;
+    transition: 0.3s;
+}
+
+#skills li:hover {
+    background: #506b70;
+    transform: translateY(-3px);
+}
+
+/* EDUCATION */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+th {
+    color: #e6d5b7;
+    text-align: left;
+    font-weight: 600;
+}
+
+th, td {
+    padding: 14px;
+    border-bottom: 1px solid #435565;
+}
+
+td {
+    color: #d2dadd;
+}
+
+/* PROJECTS */
+
+#projects {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 15px;
+}
+
+#projects h2 {
+    grid-column: 1 / -1;
+}
+
+#projects article {
+    background: linear-gradient(145deg, #344957, #283a48);
+    border: 1px solid #526a77;
+    border-radius: 11px;
+    padding: 22px;
+    margin: 0;
+    transition: 0.3s;
+}
+
+#projects article:hover {
+    transform: translateY(-5px);
+    border-color: #c3ad82;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+#projects article h3 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 19px;
+    color: #e6d5b7;
+    line-height: 1.5;
+}
+
+#projects article p {
+    font-size: 14px;
+}
+
+/* CAREER GOALS */
+
+#goals li {
+    color: #cbd3d5;
+    padding: 7px 0;
+}
+
+#goals li::marker {
+    color: #c3ad82;
+}
+
+/* CONTACT */
+
+#contact a {
+    color: #d5bd91;
+    text-decoration: none;
+}
+
+form {
+    margin-top: 20px;
+}
+
+label {
+    display: block;
+    color: #e1d6c2;
+    margin: 12px 0 5px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 13px 15px;
+    background: #192531;
+    border: 1px solid #526675;
+    border-radius: 8px;
+    color: white;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 14px;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    border-color: #b5a17b;
+    box-shadow: 0 0 8px rgba(181,161,123,0.2);
+}
+
+button {
+    background: linear-gradient(120deg, #3e6371, #294657);
+    color: white;
+    border: 1px solid #6b8790;
+    padding: 13px 28px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #a58e68;
+    color: #17232d;
+}
+
+/* FOOTER */
+
+footer {
+    text-align: center;
+    padding: 25px;
+    color: #9baab1;
+    font-size: 13px;
+    border-top: 1px solid #354654;
+    margin-top: 30px;
+}
+
+footer a {
+    color: #d5bd91;
+    text-decoration: none;
+}
+
+/* MOBILE RESPONSIVENESS */
+
+@media (max-width: 650px) {
+    body {
+        padding: 10px;
+    }
+
+    header {
+        padding: 40px 12px;
+    }
+
+    header h1 {
+        letter-spacing: 2px;
+    }
+
+    nav a {
+        display: inline-block;
+        margin: 5px 7px;
+    }
+
+    section {
+        padding: 22px 18px;
+    }
+
+    #projects {
+        grid-template-columns: 1fr;
+    }
+
+    #projects h2 {
+        grid-column: auto;
+    }
+
+    th, td {
+        padding: 10px;
+    }
+}
+
+
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header id="home">
+
+        <h1>THE QUIET DEV</h1>
+        <h2>A Mind Behind the Code.</h2>
+
+        <p>Hi! I'm Mika Jesu, an aspiring web developer.</p>
+        <p>Quiet by nature, creative by mind, and curious about technology.</p>
+
+        <!-- NAVIGATION -->
+        <nav>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#education">Education</a>
+            <a href="#projects">Projects</a>
+            <a href="#goals">Career Goals</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+    </header>
+
+    <main>
+
+        <!-- ABOUT ME -->
+        <section id="about">
+
+            <h2>About Me</h2>
+
+            <img src="profile.jpg.jpg"
+                 alt="Personal profile photo of Mika Jesu">
+
+            <p>
+                Hello! My name is Mika Jesu. I am a student who
+                enjoys learning about technology and discovering
+                how things work behind the screen. I am an introvert
+                who enjoys spending time at home, exploring new
+                interests, and learning at my own pace.
+            </p>
+
+            <p>
+                I am currently developing my knowledge in
+                programming, web development, and information
+                technology. I believe that every line of code
+                is an opportunity to learn something new.
+            </p>
+
+            <p>
+                My goal is to turn my curiosity into skills
+                and create meaningful digital experiences.
+            </p>
+
+        </section>
+
+        <!-- TECHNICAL SKILLS -->
+        <section id="skills">
+
+            <h2>My Technical Skills</h2>
+
+            <p>Here are some of the technologies I am learning:</p>
+
+            <ul>
+           <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>Git</li>
+                <li>Python</li>
+
+            </ul>
+
+        </section>
+
+        <!-- EDUCATION -->
+        <section id="education">
+
+            <h2>Educational Background</h2>
+
+            <table>
+                <tr>
+                    <th>Category</th>
+                    <th>Details</th>
+                </tr>
+
+                <tr>
+                    <td>School</td>
+                    <td>NU-Fairview</td>
+                </tr>
+
+                <tr>
+                    <td>Program</td>
+                    <td>BSIT</td>
+                </tr>
+
+                <tr>
+                    <td>Year Level</td>
+                    <td>2nd Year</td>
+                </tr>
+            </table>
+
+        </section>
+
+        <!-- PROJECTS -->
+        <section id="projects">
+
+            <h2>My Projects</h2>
+
+            <article>
+                <h3>Project 1: Web-Based Visitor Registration and Temporary Pass Management System for NU-Fairview Campus</h3>
+
+                <p>
+                    A web-based system designed to simplify visitor
+                    registration and temporary pass management at
+                    NU-Fairview Campus. It helps organize visitor
+                    information, monitor campus visits, and manage
+                    temporary passes to improve campus security
+                    and make the registration process more efficient.
+                </p>
+            </article>
+
+            <article>
+                <h3>Project 2: Appointment Scheduling System for Dental Clinics</h3>
+
+                <p>
+                    A system designed to make dental appointment
+                    scheduling easier and more organized. It allows
+                    patients to schedule appointments while helping
+                    dental clinic staff manage bookings, monitor
+                    schedules, and organize patient appointments
+                    more efficiently.
+                </p>
+            </article>
+
+        </section>
+
+        <!-- CAREER GOALS -->
+        <section id="goals">
+
+            <h2>My Career Goals</h2>
+
+            <p>These are the goals I want to achieve:</p>
+
+            <ol>
+                <li>
+                    Improve my programming skills and become
+                    confident in developing websites.
+                </li>
+
+                <li>
+                    Build more projects and create a strong
+                    portfolio that showcases my abilities.
+                </li>
+
+                <li>
+                    Become a skilled web developer and work
+                    on projects that can make a positive impact.
+                </li>
+            </ol>
+
+        </section>
+
+        <!-- CONTACT -->
+        <section id="contact">
+
+            <h2>Contact Me</h2>
+
+            <p>
+                Have a question or want to connect?
+                Feel free to send me an email.
+            </p>
+
+            <p>
+                Email:
+                <a href="mailto:mikadeveza27@gmail.com">
+                    mikadeveza27@gmail.com
+                </a>
+            </p>
+
+            <form>
+
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" name="name"
+                       placeholder="Enter your name" required>
+
+                <br><br>
+
+                <label for="email">Your Email:</label>
+                <input type="email" id="email" name="email"
+                       placeholder="Enter your email" required>
+
+                <br><br>
+
+                <label for="message">Your Message:</label>
+                <textarea id="message" name="message"
+                          rows="5"
+                          placeholder="Write your message here..."
+                          required></textarea>
+
+                <br><br>
+
+                <button type="button">Send Message</button>
+
+            </form>
+
+            <p>
+                Note: This contact form is a visual prototype
+                and does not send messages yet.
+            </p>
+
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+
+        <p>&copy; 2026 Mika Jesu. All rights reserved.</p>
+
+        <p>Thank you for visiting my little corner of the internet.</p>
+
+        <a href="#home">Back to Top</a>
+
+    </footer>
+
+</body>
+</html>
